@@ -1,0 +1,25 @@
+mixin getTransportationFormField(title, type, name, id, isRequired, options)
+  fieldset.transportation-form-field.transportation-form__field
+    label.transportation-form-field-title.transportation-form-field__title(for=id)
+      span.transportation-form-field-title__text= title
+        if isRequired
+          span.transportation-form-field-title__text--is-colored *
+    if type != 'textarea' && type !== 'select'
+      if isRequired
+        input(type=type  id=id name=name required).transportation-form-field-area.transportation-form-field__area
+      else
+        input(type=type  id=id name=name).transportation-form-field-area.transportation-form-field__area
+    else if type === 'select'
+      if isRequired
+        select.transportation-form-field-area.transportation-form-field__area(id=id name=name required)
+          for item in options
+            option.transportation-form-field-area__choice(value=item.value)= item.title
+      else
+        select.transportation-form-field-area.transportation-form-field__area(id=id name=name)
+          for item in options
+            option.transportation-form-field-area__choice(value=item.value)= item.title
+    else
+      if isRequired
+        textarea.transportation-form-field-area.transportation-form-field__area(cols='30' rows='30' id=id name=name required)
+      else
+        textarea.transportation-form-field-area.transportation-form-field__area(cols='30' rows='30' id=id name=name required)
