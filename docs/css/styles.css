@@ -1,2 +1,175 @@
+/*
+  --- Generates em sizes by px ---
+  $args... - includes count of size with or not with a type of size (example: 16px, 16)
+*/
 
+/*
+  --- Generates a color by template colors ---
+  $name - includes a name for color (example: secondary, theme)
+*/
+
+/*
+  --- Generates url to local fonts ---
+  $fontName - name by font, which uses in property "font-family" (example: 'Arial', 'Roboto')
+  $fileName - name by font's file to include in website (example: 'ArialRegular', 'ArialBold')
+  $fontWeight - count for font's weight, which uses in property "font-weight" (example: 700, 300, 100)
+  $fontStyle - it's a boolean type which includes values "true" or "false" - adds a property "font-style: italic" if it's true
+*/
+
+@font-face {
+  font-family: "FiraSans";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/FiraSans/FiraSans-Regular.woff2") format("woff2"), url("../fonts/FiraSans/FiraSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/FiraSans/FiraSans-Bold.woff2") format("woff2"), url("../fonts/FiraSans/FiraSans-Bold.ttf") format("truetype");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+section {
+  padding-top: 5.625em;
+  padding-bottom: 5.625em;
+}
+
+picture {
+  display: inline-block;
+  width: 100%;
+  line-height: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+}
+
+input {
+  outline: unset;
+  border: unset;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+input::-moz-placeholder {
+  opacity: 0.6;
+}
+
+input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+input::-ms-input-placeholder {
+  opacity: 0.6;
+}
+
+input::placeholder {
+  opacity: 0.6;
+}
+
+footer {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+body {
+  font: 16px/1.5 "FiraSans", "Arial", "Roboto", sans-serif;
+}
+
+.header--is-fixed {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header--is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.u-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 0.9375em;
+  padding-left: 0.9375em;
+  width: 100%;
+  max-width: 71.25em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-wrapper--is-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
 /*# sourceMappingURL=styles.css.map */

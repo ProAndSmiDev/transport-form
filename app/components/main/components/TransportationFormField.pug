@@ -13,11 +13,17 @@ mixin getTransportationFormField(title, type, name, id, isRequired, options)
       if isRequired
         select.transportation-form-field-area.transportation-form-field__area(id=id name=name required)
           for item in options
-            option.transportation-form-field-area__choice(value=item.value)= item.title
+            if item.isSelected
+              option.transportation-form-field-area__choice(value=item.value selected)= item.title
+            else
+              option.transportation-form-field-area__choice(value=item.value)= item.title
       else
         select.transportation-form-field-area.transportation-form-field__area(id=id name=name)
           for item in options
-            option.transportation-form-field-area__choice(value=item.value)= item.title
+            if item.isSelected
+              option.transportation-form-field-area__choice(value=item.value selected)= item.title
+            else
+              option.transportation-form-field-area__choice(value=item.value)= item.title
     else
       if isRequired
         textarea.transportation-form-field-area.transportation-form-field__area(cols='30' rows='30' id=id name=name required)
