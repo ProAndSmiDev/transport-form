@@ -1,0 +1,103 @@
+.transportation-form-field {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: none;
+
+  &--with-icon {
+    &::after {
+      content: '';
+      display: flex;
+      position: absolute;
+      bottom: em(1, $fz);
+      left: em(1, $fz);
+      align-items: center;
+      justify-content: center;
+      width: em(45, $fz);
+      height: em(37, $fz);
+      border-top-left-radius: em(5, $fz);
+      border-bottom-left-radius: em(5, $fz);
+      background-color: lighten($primary, 95%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: em(45, $fz) em(22, $fz);
+    }
+  }
+
+  &--start-city {
+    &::after {
+      background-image: url('/img/sprite.svg#location');
+    }
+  }
+
+  &--customs {
+    &::after {
+      background-image: url('/img/sprite.svg#customs');
+    }
+  }
+
+  &--finish-city {
+    &::after {
+      background-image: url('/img/sprite.svg#finish');
+    }
+  }
+
+  &--transport-date {
+    &::after {
+      background-image: url('/img/sprite.svg#calendar');
+    }
+  }
+
+  &--truck-type {
+    &::after {
+      background-image: url('/img/sprite.svg#truck');
+    }
+  }
+
+  &__area {
+    width: 100%;
+    margin-top: em(4, $fz);
+  }
+}
+
+.transportation-form-field-title {
+  text-transform: uppercase;
+
+  &--is-textarea {
+    text-transform: none;
+  }
+
+  &__text {
+    $fz: 14;
+    font-size: em($fz, $fz_base);
+    color: $primary;
+
+    &--is-colored {
+      color: hsl(0, 100%, 50%);
+    }
+  }
+}
+
+.transportation-form-field-area {
+  $self: &;
+  $fz: 14;
+  padding: em(8 15 8 56, $fz);
+  border: 1px solid lighten($primary, 75%);
+  border-radius: em(5, $fz);
+  background-color: hsl(0, 0%, 100%);
+  font-size: em($fz, $fz_base);
+
+  &--is-select {
+    padding-top: em(10, $fz);
+    padding-bottom: em(10, $fz);
+
+    &[id*=termsDelivery] {
+      padding-left: em(15, $fz);
+    }
+  }
+
+  &--is-textarea {
+    padding-left: em(15, $fz);
+    resize: none;
+  }
+}

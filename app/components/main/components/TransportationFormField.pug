@@ -1,9 +1,9 @@
-mixin getTransportationFormField(title, type, name, id, isRequired, options)
-  fieldset.transportation-form-field.transportation-form__field
-    label.transportation-form-field-title.transportation-form-field__title(for=id)
+mixin getTransportationFormField(title, type, name, id, iconName, isRequired, options)
+  fieldset.transportation-form-field.transportation-form__field(class=`${(iconName) ? 'transportation-form-field--with-icon transportation-form-field--' + iconName : ''}`)
+    label.transportation-form-field-title.transportation-form-field__title(for=id class=`${(type === 'textarea') ? 'transportation-form-field-title--is-textarea' : ''}`)
       span.transportation-form-field-title__text= title
         if isRequired
-          span.transportation-form-field-title__text--is-colored *
+          span.transportation-form-field-title__text--is-colored &nbsp;&nbsp;*
     if type != 'textarea' && type !== 'select'
       if isRequired
         input(type=type  id=id name=name required).transportation-form-field-area.transportation-form-field__area
@@ -11,14 +11,15 @@ mixin getTransportationFormField(title, type, name, id, isRequired, options)
         input(type=type  id=id name=name).transportation-form-field-area.transportation-form-field__area
     else if type === 'select'
       if isRequired
-        select.transportation-form-field-area.transportation-form-field__area(id=id name=name required)
+        select.transportation-form-field-area.transportation-form-field__area.transportation-form-field-area--is-select(id=id name=name required)
           for item in options
             if item.isSelected
               option.transportation-form-field-area__choice(value=item.value selected)= item.title
             else
               option.transportation-form-field-area__choice(value=item.value)= item.title
+
       else
-        select.transportation-form-field-area.transportation-form-field__area(id=id name=name)
+        select.transportation-form-field-area.transportation-form-field__area.transportation-form-field-area--is-select(id=id name=name)
           for item in options
             if item.isSelected
               option.transportation-form-field-area__choice(value=item.value selected)= item.title
@@ -26,6 +27,6 @@ mixin getTransportationFormField(title, type, name, id, isRequired, options)
               option.transportation-form-field-area__choice(value=item.value)= item.title
     else
       if isRequired
-        textarea.transportation-form-field-area.transportation-form-field__area(cols='30' rows='30' id=id name=name required)
+        textarea.transportation-form-field-area.transportation-form-field__area.transportation-form-field-area--is-textarea(id=id name=name required)
       else
-        textarea.transportation-form-field-area.transportation-form-field__area(cols='30' rows='30' id=id name=name required)
+        textarea.transportation-form-field-area.transportation-form-field__area.transportation-form-field-area--is-textarea(id=id name=name required)

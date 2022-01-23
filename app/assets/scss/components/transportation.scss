@@ -1,3 +1,31 @@
 .transportation {
-  
+  padding-top: em(30, $fz);
+  padding-bottom: em(30, $fz);
+
+  &__wrapper {
+    align-items: baseline;
+    justify-content: flex-start;
+    max-width: em(935, $fz);
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: em(285, $fz);
+  }
+
+  &__form {
+    width: 100%;
+    max-width: em(442, $fz);
+    margin-left: em(25, $fz);
+
+    @media (max-width: 767px) {
+      margin-top: em(25, $fz);
+      margin-left: 0;
+    }
+  }
 }

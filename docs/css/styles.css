@@ -48,11 +48,6 @@ main {
   flex: 1 0 auto;
 }
 
-section {
-  padding-top: 5.625em;
-  padding-bottom: 5.625em;
-}
-
 picture {
   display: inline-block;
   width: 100%;
@@ -171,5 +166,223 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+[class*='is-sr-only'] {
+  position: absolute;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.transportation {
+  padding-top: 1.875em;
+  padding-bottom: 1.875em;
+}
+
+.transportation__wrapper {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  max-width: 58.4375em;
+}
+
+.transportation__info {
+  width: 100%;
+  max-width: 17.8125em;
+}
+
+.transportation__form {
+  width: 100%;
+  max-width: 27.625em;
+  margin-left: 1.5625em;
+}
+
+.transportation-info__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.transportation-info__status {
+  margin-top: 0.1875em;
+  margin-left: 1.25em;
+}
+
+.transportation-info__annotation {
+  margin-top: 0.1875em;
+}
+
+.transportation-info__note {
+  margin-top: 1.125em;
+}
+
+.transportation-info-title__text {
+  font-size: 1.125em;
+}
+
+.transportation-info-status__text {
+  font-size: 0.875em;
+}
+
+.transportation-info-annotation {
+  line-height: 1.4;
+  color: gray;
+}
+
+.transportation-info-annotation__text {
+  font-size: 0.875em;
+}
+
+.transportation-info-note__text {
+  font-size: 0.75em;
+  color: #999999;
+}
+
+.transportation-info-note__text--is-colored {
+  font-weight: bold;
+  color: red;
+}
+
+.transportation-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.transportation-form__field {
+  width: 100%;
+}
+
+.transportation-form__field:not(:last-child) {
+  margin-bottom: 0.9375em;
+}
+
+.transportation-form-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: none;
+}
+
+.transportation-form-field--with-icon::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0.0625em;
+  left: 0.0625em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.8125em;
+  height: 2.3125em;
+  border-top-left-radius: 0.3125em;
+  border-bottom-left-radius: 0.3125em;
+  background-color: #f2f2f2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2.8125em 1.375em;
+}
+
+.transportation-form-field--start-city::after {
+  background-image: url("/img/sprite.svg#location");
+}
+
+.transportation-form-field--customs::after {
+  background-image: url("/img/sprite.svg#customs");
+}
+
+.transportation-form-field--finish-city::after {
+  background-image: url("/img/sprite.svg#finish");
+}
+
+.transportation-form-field--transport-date::after {
+  background-image: url("/img/sprite.svg#calendar");
+}
+
+.transportation-form-field--truck-type::after {
+  background-image: url("/img/sprite.svg#truck");
+}
+
+.transportation-form-field__area {
+  width: 100%;
+  margin-top: 0.25em;
+}
+
+.transportation-form-field-title {
+  text-transform: uppercase;
+}
+
+.transportation-form-field-title--is-textarea {
+  text-transform: none;
+}
+
+.transportation-form-field-title__text {
+  font-size: 0.875em;
+  color: black;
+}
+
+.transportation-form-field-title__text--is-colored {
+  color: red;
+}
+
+.transportation-form-field-area {
+  padding: 0.57143em 1.07143em 0.57143em 4em;
+  border: 1px solid #bfbfbf;
+  border-radius: 0.35714em;
+  background-color: white;
+  font-size: 0.875em;
+}
+
+.transportation-form-field-area--is-select {
+  padding-top: 0.71429em;
+  padding-bottom: 0.71429em;
+}
+
+.transportation-form-field-area--is-select[id*=termsDelivery] {
+  padding-left: 1.07143em;
+}
+
+.transportation-form-field-area--is-textarea {
+  padding-left: 1.07143em;
+  resize: none;
+}
+
+@media (max-width: 767px) {
+  .transportation__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .transportation__form {
+    margin-top: 1.5625em;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

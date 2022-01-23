@@ -9,9 +9,10 @@ html(lang='ru')
       +getMeta(name, content)
     +getLink('icon', 'favicon')
     +getLink('stylesheet', 'styles')
+    +getLink('module', 'styles', 'datepicker')
     +getLink('canonical', '')
   body
     block Content
 
-  +getScript('libs.min')
+  +getScript('datepicker/js/datepicker')
   +getScript('app.min')

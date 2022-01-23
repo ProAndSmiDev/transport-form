@@ -3,11 +3,8 @@ include ./components/TransportationForm
 
 mixin getTransportation(parent)
   section.transportation(class=`${(parent) ? `${parent}__transportation` : ''}`)
-    h2.transportation-title.transportation__title.transportation-title--is-hidden
+    h2.transportation-title.transportation__title.transportation-title--is-sr-only
       span.transportation-title__text Форма перевозок
-    .u-wrapper
-      .transportation__col
-        +getTransportationInfo('transportation')
-
-      .transportation__col
-        +getTransportationForm('transportation')
+    .u-wrapper.u-wrapper--is-row.transportation__wrapper
+      +getTransportationInfo('transportation')
+      +getTransportationForm('transportation')

@@ -1,4 +1,70 @@
 {
+  "formData": {
+    "truckTypes": [
+      {
+        "title": "120m3",
+        "value": "120m3",
+        "isSelected": false
+      },
+      {
+        "title": "90m3",
+        "value": "90m3",
+        "isSelected": true
+      },
+      {
+        "title": "82m3",
+        "value": "82m3",
+        "isSelected": false
+      },
+      {
+        "title": "45m3",
+        "value": "45m3",
+        "isSelected": false
+      },
+      {
+        "title": "30m3",
+        "value": "30m3",
+        "isSelected": false
+      },
+      {
+        "title": "15m3",
+        "value": "15m3",
+        "isSelected": false
+      },
+      {
+        "title": "9m3",
+        "value": "9m3",
+        "isSelected": false
+      },
+      {
+        "title": "6m3",
+        "value": "6m3",
+        "isSelected": false
+      }
+    ],
+    "termsDelivery": [
+      {
+        "title": "FCA (Free Carrier)",
+        "value": "FCA",
+        "isSelected": true
+      },
+      {
+        "title": "EXW (Ex Works)",
+        "value": "EXW",
+        "isSelected": false
+      },
+      {
+        "title": "FAS (Free Alongside Ship)",
+        "value": "FAS",
+        "isSelected": false
+      },
+      {
+        "title": "FOB (Free On Board)",
+        "value": "FOB",
+        "isSelected": false
+      }
+    ]
+  },
   "developer": {
     "author": "AndSmi",
     "copyright": "Developed by AndSmi"

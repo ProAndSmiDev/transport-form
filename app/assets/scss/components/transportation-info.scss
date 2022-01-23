@@ -1,0 +1,55 @@
+.transportation-info {
+  &__header {
+    display: flex;
+  }
+
+  &__status {
+    margin-top: em(3, $fz);
+    margin-left: em(20, $fz);
+  }
+
+  &__annotation {
+    margin-top: em(3, $fz);
+  }
+
+  &__note {
+    margin-top: em(18, $fz);
+  }
+}
+
+.transportation-info-title {
+  &__text {
+    $fz: 18;
+    font-size: em($fz, $fz_base);
+  }
+}
+
+.transportation-info-status {
+  &__text {
+    $fz: 14;
+    font-size: em($fz, $fz_base);
+  }
+}
+
+.transportation-info-annotation {
+  line-height: 1.4;
+  color: lighten($primary, 50%);
+
+  &__text {
+    $fz: 14;
+    font-size: em($fz, $fz_base);
+  }
+}
+
+.transportation-info-note {
+  &__text {
+    $fz: 12;
+    font-size: em($fz, $fz_base);
+    color: lighten($primary, 60%);
+
+    &--is-colored {
+      font-weight: bold;
+      color: hsl(0, 100%, 50%);
+    }
+  }
+}

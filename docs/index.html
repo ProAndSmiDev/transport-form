@@ -8,73 +8,70 @@
     <meta name="copyright" content="Developed by AndSmi"/>
     <link rel="shortcut icon" href="./img/favicon.ico"/>
     <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./js/datepicker/css/datepicker.min.css"/>
     <link rel="canonical" href="/"/>
   </head>
   <body>
     <section class="transportation">
-      <h2 class="transportation-title transportation__title transportation-title--is-hidden"><span class="transportation-title__text">Форма перевозок</span></h2>
-      <div class="u-wrapper">
-        <div class="transportation__col">
-          <aside class="transportation-info transportation__info">
-            <header class="transportation-info__header">
-              <h3 class="transportation-info-title transportation-info__title"><span class="transportation-info-title__text">Запрос #24</span></h3>
-              <p class="transportation-info-status transportation-info__status"><span class="transportation-info-status__text">Ожидает обработки</span></p>
-            </header>
-            <p class="transportation-info-annotation transportation-info__annotation"><span class="transportation-info-annotation__text">Информация о точках маршрута, модели транспортного средства и другие сведения о перевозках.</span></p>
-            <footer class="transportation-info__footer">
-              <p class="transportation-info-note transportation-info__note"><span class="transportation-info-note__text">Поля, помеченные<span class="transportation-info-note__text--is-colored">&nbsp;*&nbsp;</span>являются обязательными для заполнения.</span></p>
-            </footer>
-          </aside>
-        </div>
-        <div class="transportation__col">
-          <form class="transportation-form transportation__form" method="POST" action="/">
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="startCity"><span class="transportation-form-field-title__text">Адрес места загрузки<span class="transportation-form-field-title__text--is-colored">*</span></span></label>
-              <input class="transportation-form-field-area transportation-form-field__area" type="text" id="startCity" name="userStartCity" required="required"/>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="customs"><span class="transportation-form-field-title__text">Таможня назначения</span></label>
-              <input class="transportation-form-field-area transportation-form-field__area" type="text" id="customs" name="userCustoms"/>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="finishCity"><span class="transportation-form-field-title__text">Адрес места разгрузки<span class="transportation-form-field-title__text--is-colored">*</span></span></label>
-              <input class="transportation-form-field-area transportation-form-field__area" type="text" id="finishCity" name="userFinishCity" required="required"/>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="transportDate"><span class="transportation-form-field-title__text">Предполагаемая дата перевозки</span></label>
-              <input class="transportation-form-field-area transportation-form-field__area" type="text" id="transportDate" name="userTransportDate"/>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="truckType"><span class="transportation-form-field-title__text">Тип кузова<span class="transportation-form-field-title__text--is-colored">*</span></span></label>
-              <select class="transportation-form-field-area transportation-form-field__area" id="truckType" name="userTruckType" required="required">
-                <option class="transportation-form-field-area__choice" value="120m3">120m3</option>
-                <option class="transportation-form-field-area__choice" value="90m3" selected="selected">90m3</option>
-                <option class="transportation-form-field-area__choice" value="82m3">82m3</option>
-                <option class="transportation-form-field-area__choice" value="45m3">45m3</option>
-                <option class="transportation-form-field-area__choice" value="30m3">30m3</option>
-                <option class="transportation-form-field-area__choice" value="15m3">15m3</option>
-                <option class="transportation-form-field-area__choice" value="9m3">9m3</option>
-                <option class="transportation-form-field-area__choice" value="6m3">6m3</option>
-              </select>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="termsDelivery"><span class="transportation-form-field-title__text">Условия поставки</span></label>
-              <select class="transportation-form-field-area transportation-form-field__area" id="termsDelivery" name="userTermsDelivery">
-                <option class="transportation-form-field-area__choice" value="FCA" selected="selected">FCA (Free Carrier)</option>
-                <option class="transportation-form-field-area__choice" value="EXW">EXW (Ex Works)</option>
-                <option class="transportation-form-field-area__choice" value="FAS">FAS (Free Alongside Ship)</option>
-                <option class="transportation-form-field-area__choice" value="FOB">FOB (Free On Board)</option>
-              </select>
-            </fieldset>
-            <fieldset class="transportation-form-field transportation-form__field">
-              <label class="transportation-form-field-title transportation-form-field__title" for="comment"><span class="transportation-form-field-title__text">Комментарий</span></label>
-              <textarea class="transportation-form-field-area transportation-form-field__area" cols="30" rows="30" id="comment" name="userComment" required="required"></textarea>
-            </fieldset>
-          </form>
-        </div>
+      <h2 class="transportation-title transportation__title transportation-title--is-sr-only"><span class="transportation-title__text">Форма перевозок</span></h2>
+      <div class="u-wrapper u-wrapper--is-row transportation__wrapper">
+        <aside class="transportation-info transportation__info">
+          <header class="transportation-info__header">
+            <h3 class="transportation-info-title transportation-info__title"><span class="transportation-info-title__text">Запрос # 24</span></h3>
+            <p class="transportation-info-status transportation-info__status"><span class="transportation-info-status__text">Ожидает обработки</span></p>
+          </header>
+          <p class="transportation-info-annotation transportation-info__annotation"><span class="transportation-info-annotation__text">Информация о точках маршрута, модели транспортного средства и другие сведения&nbsp;о&nbsp;перевозке.</span></p>
+          <footer class="transportation-info__footer">
+            <p class="transportation-info-note transportation-info__note"><span class="transportation-info-note__text">Поля, помеченные<span class="transportation-info-note__text--is-colored">&nbsp;*&nbsp;</span>являются обязательными для заполнения.</span></p>
+          </footer>
+        </aside>
+        <form class="transportation-form transportation__form" method="POST" action="/">
+          <fieldset class="transportation-form-field transportation-form__field transportation-form-field--with-icon transportation-form-field--start-city">
+            <label class="transportation-form-field-title transportation-form-field__title" for="startCity"><span class="transportation-form-field-title__text">Адрес места загрузки<span class="transportation-form-field-title__text--is-colored">&nbsp;&nbsp;*</span></span></label>
+            <input class="transportation-form-field-area transportation-form-field__area" type="text" id="startCity" name="userStartCity" required="required"/>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field transportation-form-field--with-icon transportation-form-field--customs">
+            <label class="transportation-form-field-title transportation-form-field__title" for="customs"><span class="transportation-form-field-title__text">Таможня назначения</span></label>
+            <input class="transportation-form-field-area transportation-form-field__area" type="text" id="customs" name="userCustoms"/>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field transportation-form-field--with-icon transportation-form-field--finish-city">
+            <label class="transportation-form-field-title transportation-form-field__title" for="finishCity"><span class="transportation-form-field-title__text">Адрес места разгрузки<span class="transportation-form-field-title__text--is-colored">&nbsp;&nbsp;*</span></span></label>
+            <input class="transportation-form-field-area transportation-form-field__area" type="text" id="finishCity" name="userFinishCity" required="required"/>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field transportation-form-field--with-icon transportation-form-field--transport-date">
+            <label class="transportation-form-field-title transportation-form-field__title" for="transportDate"><span class="transportation-form-field-title__text">Предполагаемая дата перевозки</span></label>
+            <input class="transportation-form-field-area transportation-form-field__area" type="text" id="transportDate" name="userTransportDate"/>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field transportation-form-field--with-icon transportation-form-field--truck-type">
+            <label class="transportation-form-field-title transportation-form-field__title" for="truckType"><span class="transportation-form-field-title__text">Тип кузова<span class="transportation-form-field-title__text--is-colored">&nbsp;&nbsp;*</span></span></label>
+            <select class="transportation-form-field-area transportation-form-field__area transportation-form-field-area--is-select" id="truckType" name="userTruckType" required="required">
+              <option class="transportation-form-field-area__choice" value="120m3">120m3</option>
+              <option class="transportation-form-field-area__choice" value="90m3" selected="selected">90m3</option>
+              <option class="transportation-form-field-area__choice" value="82m3">82m3</option>
+              <option class="transportation-form-field-area__choice" value="45m3">45m3</option>
+              <option class="transportation-form-field-area__choice" value="30m3">30m3</option>
+              <option class="transportation-form-field-area__choice" value="15m3">15m3</option>
+              <option class="transportation-form-field-area__choice" value="9m3">9m3</option>
+              <option class="transportation-form-field-area__choice" value="6m3">6m3</option>
+            </select>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field">
+            <label class="transportation-form-field-title transportation-form-field__title" for="termsDelivery"><span class="transportation-form-field-title__text">Условия поставки</span></label>
+            <select class="transportation-form-field-area transportation-form-field__area transportation-form-field-area--is-select" id="termsDelivery" name="userTermsDelivery">
+              <option class="transportation-form-field-area__choice" value="FCA" selected="selected">FCA (Free Carrier)</option>
+              <option class="transportation-form-field-area__choice" value="EXW">EXW (Ex Works)</option>
+              <option class="transportation-form-field-area__choice" value="FAS">FAS (Free Alongside Ship)</option>
+              <option class="transportation-form-field-area__choice" value="FOB">FOB (Free On Board)</option>
+            </select>
+          </fieldset>
+          <fieldset class="transportation-form-field transportation-form__field">
+            <label class="transportation-form-field-title transportation-form-field__title transportation-form-field-title--is-textarea" for="comment"><span class="transportation-form-field-title__text">Комментарий</span></label>
+            <textarea class="transportation-form-field-area transportation-form-field__area transportation-form-field-area--is-textarea" id="comment" name="userComment" required="required"></textarea>
+          </fieldset>
+        </form>
       </div>
     </section>
   </body>
-  <script src="./js/libs.min.js"></script>
+  <script src="./js/datepicker/js/datepicker.js"></script>
   <script src="./js/app.min.js"></script>
 </html>

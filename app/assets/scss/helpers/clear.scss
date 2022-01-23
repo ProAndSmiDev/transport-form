@@ -13,11 +13,6 @@ main {
   flex: 1 0 auto;
 }
 
-section {
-  padding-top: em(90, $fz);
-  padding-bottom: em(90, $fz);
-}
-
 picture {
   display: inline-block;
   width: 100%;
@@ -100,4 +95,15 @@ body {
   &--is-row {
     flex-direction: row;
   }
+}
+
+[class*='is-sr-only'] {
+  position: absolute;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
 }

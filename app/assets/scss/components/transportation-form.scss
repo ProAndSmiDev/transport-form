@@ -1,0 +1,12 @@
+.transportation-form {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: em(15, $fz);
+    }
+  }
+}

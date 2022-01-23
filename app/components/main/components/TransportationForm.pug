@@ -1,78 +1,11 @@
 include ./TransportationFormField
 
 mixin getTransportationForm(parent)
-  -
-    const truckTypes = [
-      {
-        title:      '120m3',
-        value:      '120m3',
-        isSelected: false,
-      },
-      {
-        title:      '90m3',
-        value:      '90m3',
-        isSelected: true,
-      },
-      {
-        title:      '82m3',
-        value:      '82m3',
-        isSelected: false,
-      },
-      {
-        title:      '45m3',
-        value:      '45m3',
-        isSelected: false,
-      },
-      {
-        title:      '30m3',
-        value:      '30m3',
-        isSelected: false,
-      },
-      {
-        title:      '15m3',
-        value:      '15m3',
-        isSelected: false,
-      },
-      {
-        title:      '9m3',
-        value:      '9m3',
-        isSelected: false,
-      },
-      {
-        title:      '6m3',
-        value:      '6m3',
-        isSelected: false,
-      },
-    ];
-
-    const termsDelivery = [
-      {
-        title:      'FCA (Free Carrier)',
-        value:      'FCA',
-        isSelected: true,
-      },
-      {
-        title:      'EXW (Ex Works)',
-        value:      'EXW',
-        isSelected: false,
-      },
-      {
-        title:      'FAS (Free Alongside Ship)',
-        value:      'FAS',
-        isSelected: false,
-      },
-      {
-        title:      'FOB (Free On Board)',
-        value:      'FOB',
-        isSelected: false,
-      },
-    ]
-
   form.transportation-form(class=`${(parent) ? `${parent}__form` : ''}` method='POST' action='/')
-    +getTransportationFormField('Адрес места загрузки', 'text', 'userStartCity', 'startCity', true)
-    +getTransportationFormField('Таможня назначения', 'text', 'userCustoms', 'customs', false)
-    +getTransportationFormField('Адрес места разгрузки', 'text', 'userFinishCity', 'finishCity', true)
-    +getTransportationFormField('Предполагаемая дата перевозки', 'text', 'userTransportDate', 'transportDate', false)
-    +getTransportationFormField('Тип кузова', 'select', 'userTruckType', 'truckType', true, truckTypes)
-    +getTransportationFormField('Условия поставки', 'select', 'userTermsDelivery', 'termsDelivery', false, termsDelivery)
-    +getTransportationFormField('Комментарий', 'textarea', 'userComment', 'comment', false)
+    +getTransportationFormField('Адрес места загрузки', 'text', 'userStartCity', 'startCity', 'start-city', true)
+    +getTransportationFormField('Таможня назначения', 'text', 'userCustoms', 'customs', 'customs', false)
+    +getTransportationFormField('Адрес места разгрузки', 'text', 'userFinishCity', 'finishCity', 'finish-city', true)
+    +getTransportationFormField('Предполагаемая дата перевозки', 'text', 'userTransportDate', 'transportDate', 'transport-date', false)
+    +getTransportationFormField('Тип кузова', 'select', 'userTruckType', 'truckType', 'truck-type', true, formData.truckTypes)
+    +getTransportationFormField('Условия поставки', 'select', 'userTermsDelivery', 'termsDelivery', '', false, formData.termsDelivery)
+    +getTransportationFormField('Комментарий', 'textarea', 'userComment', 'comment', '', false)
