@@ -26,31 +26,31 @@
 
   &--start-city {
     &::after {
-      background-image: url('/img/sprite.svg#location');
+      background-image: url('/transport-form/img/sprite.svg#location');
     }
   }
 
   &--customs {
     &::after {
-      background-image: url('/img/sprite.svg#customs');
+      background-image: url('/transport-form/img/sprite.svg#customs');
     }
   }
 
   &--finish-city {
     &::after {
-      background-image: url('/img/sprite.svg#finish');
+      background-image: url('/transport-form/img/sprite.svg#finish');
     }
   }
 
   &--transport-date {
     &::after {
-      background-image: url('/img/sprite.svg#calendar');
+      background-image: url('/transport-form/img/sprite.svg#calendar');
     }
   }
 
   &--truck-type {
     &::after {
-      background-image: url('/img/sprite.svg#truck');
+      background-image: url('/transport-form/img/sprite.svg#truck');
     }
   }
 

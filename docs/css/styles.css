@@ -288,23 +288,23 @@ body {
 }
 
 .transportation-form-field--start-city::after {
-  background-image: url("/img/sprite.svg#location");
+  background-image: url("/transport-form/img/sprite.svg#location");
 }
 
 .transportation-form-field--customs::after {
-  background-image: url("/img/sprite.svg#customs");
+  background-image: url("/transport-form/img/sprite.svg#customs");
 }
 
 .transportation-form-field--finish-city::after {
-  background-image: url("/img/sprite.svg#finish");
+  background-image: url("/transport-form/img/sprite.svg#finish");
 }
 
 .transportation-form-field--transport-date::after {
-  background-image: url("/img/sprite.svg#calendar");
+  background-image: url("/transport-form/img/sprite.svg#calendar");
 }
 
 .transportation-form-field--truck-type::after {
-  background-image: url("/img/sprite.svg#truck");
+  background-image: url("/transport-form/img/sprite.svg#truck");
 }
 
 .transportation-form-field__area {
