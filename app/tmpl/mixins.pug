@@ -6,13 +6,13 @@ mixin getMeta(name, content)
 
 mixin getLink(type, file, moduleName)
   if type === 'stylesheet'
-    link(rel=type href=`./css/${file}.css`)
+    link(rel=type href=`./transport-form/css/${file}.css`)
   else if type === 'icon'
-    link(rel='shortcut icon' href=`./img/${file}.ico`)
+    link(rel='shortcut icon' href=`./transport-form/img/${file}.ico`)
   else if type === 'canonical'
     link(rel='canonical' href='/')
   else
-    link(rel='stylesheet' href=`./js/${moduleName}/css/${moduleName}.min.css`)
+    link(rel='stylesheet' href=`./transport-form/js/${moduleName}/css/${moduleName}.min.css`)
 
 mixin getScript(file)
-  script(src=`./js/${file}.js`)
+  script(src=`./transport-form/js/${file}.js`)
