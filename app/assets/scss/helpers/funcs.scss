@@ -1,7 +1,6 @@
-/*
-  --- Generates em sizes by px ---
-  $args... - includes count of size with or not with a type of size (example: 16px, 16)
-*/
+//  --- Generates em sizes by px ---
+//  $args... - includes count of size with or not with a type of size (example: 16px, 16)
+
 @function strip-units($unit) {
   @return $unit / ($unit * 0 + 1);
 }
@@ -26,10 +25,10 @@
   @return if(length($result) == 1, nth($result, 1), $result);
 }
 
-/*
-  --- Generates a color by template colors ---
-  $name - includes a name for color (example: secondary, theme)
-*/
+
+//  --- Generates a color by template colors ---
+//  $name - includes a name for color (example: secondary, theme)
+
 @function color($name) {
   @if map-has-key($colors, $name) {
     @return map-get($colors, $name);

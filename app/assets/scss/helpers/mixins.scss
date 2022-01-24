@@ -1,10 +1,9 @@
-/*
-  --- Generates url to local fonts ---
-  $fontName - name by font, which uses in property "font-family" (example: 'Arial', 'Roboto')
-  $fileName - name by font's file to include in website (example: 'ArialRegular', 'ArialBold')
-  $fontWeight - count for font's weight, which uses in property "font-weight" (example: 700, 300, 100)
-  $fontStyle - it's a boolean type which includes values "true" or "false" - adds a property "font-style: italic" if it's true
-*/
+//  --- Generates url to local fonts ---
+//  $fontName - name by font, which uses in property "font-family" (example: 'Arial', 'Roboto')
+//  $fileName - name by font's file to include in website (example: 'ArialRegular', 'ArialBold')
+//  $fontWeight - count for font's weight, which uses in property "font-weight" (example: 700, 300, 100)
+//  $fontStyle - it's a boolean type which includes values "true" or "false" - adds a property "font-style: italic" if it's true
+
 @mixin setFamily($fontName, $fileName, $fontWeight, $fontStyle: false) {
   @font-face {
     font-family: $fontName;
